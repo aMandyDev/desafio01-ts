@@ -1,9 +1,11 @@
-import { CompanyAccount } from './class/CompanyAccount'
-import { PeopleAccount } from './class/PeopleAccount'
+import { PeopleAccount } from "./class/PeopleAccount";
+import { CompanyAccount } from "./class/CompanyAccount";
 
-const peopleAccount: PeopleAccount = new PeopleAccount(1, 'Nath', 10)
-console.log(peopleAccount)
-peopleAccount.deposit()
-const companyAccount: CompanyAccount = new CompanyAccount('DIO', 20)
-companyAccount.deposit()
-console.log(companyAccount)
+const peopleAccount = new PeopleAccount(123456789, "Mandyta", 789);
+peopleAccount.deposit(100);
+peopleAccount.withdraw(50);
+
+const companyAccount = new CompanyAccount("Empresa ABC", 456);
+companyAccount.deposit(100);
+companyAccount.getLoan(500);
+companyAccount.withdraw(100);
